@@ -1,7 +1,7 @@
 // NOTE H5 端使用 devServer 实现跨域，需要修改 package.json 的运行命令，加入环境变量
 const isH5 = process.env.CLIENT_ENV === 'h5'
 const HOST = '"http://192.168.1.154:18100"'
-const HOST_M = '"http://m.you.163.com"'
+const HOST_M = '"http://192.168.1.154:18100"'
 
 module.exports = {
   env: {
@@ -14,6 +14,8 @@ module.exports = {
   weapp: {},
   h5: {
     devServer: {
+      port: 10088,
+      host: 'localhost',
       proxy: {
         '/api/': {
           target: JSON.parse(HOST),

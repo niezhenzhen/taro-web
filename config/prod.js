@@ -1,7 +1,7 @@
 const isH5 = process.env.CLIENT_ENV === 'h5'
 
-const HOST = '"https://"'
-const HOST_M = '"https://"'
+const HOST = '"http://"'
+const HOST_M = '"http://"'
 
 // XXX 搭了个 proxy 用于演示 prod 环境的 H5
 const HOST_H5 = '"http://api"'
