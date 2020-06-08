@@ -1,33 +1,22 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View, Text } from '@tarojs/components'
 import { connect } from '@tarojs/redux'
+import * as actions from '@actions/home'
 
-import { add, minus, asyncAdd } from '@actions/counter'
+import './index.less';
 
-import './index.less'
+@connect(state => state.home, { ...actions })
 
-
-@connect(({ counter }) => ({
-  counter
-}), (dispatch) => ({
-  add () {
-    dispatch(add())
-  },
-  dec () {
-    dispatch(minus())
-  },
-  asyncAdd () {
-    dispatch(asyncAdd())
-  }
-}))
 class Index extends Component {
 
   config = {
     navigationBarTitleText: '首页11'
   };
 
-  componentWillReceiveProps (nextProps) {
-    console.log(this.props, nextProps)
+  componentDidMount() {
+    this.props.dispatchHome().then((res) => {
+      console.log(res)
+    })
   }
 
   componentWillUnmount () { }

@@ -16,7 +16,7 @@ const sassImporter = function(url) {
 
 const config = {
   projectName: 'taro-web',
-  date: '2019-2-1',
+  date: '2020-6-2',
   designWidth: 750,
   deviceRatio: {
     '640': 2.34 / 2,
@@ -49,9 +49,10 @@ const config = {
     '@actions': path.resolve(__dirname, '..', 'src/actions'),
     '@assets': path.resolve(__dirname, '..', 'src/assets'),
     '@components': path.resolve(__dirname, '..', 'src/components'),
+    '@constants': path.resolve(__dirname, '..', 'src/constants'),
     '@reducers': path.resolve(__dirname, '..', 'src/reducers'),
     '@styles': path.resolve(__dirname, '..', 'src/styles'),
-    '@helper': path.resolve(__dirname, '..', 'src/helper')
+    '@utils': path.resolve(__dirname, '..', 'src/utils')
   },
   copy: {
     patterns: [

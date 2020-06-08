@@ -1,6 +1,6 @@
 {
 	"name": "taro-web",
-	"version": "1.3.0",
+	"version": "1.0.0",
 	"private": true,
 	"description": "Taro多端实践小程序",
 	"scripts": {
